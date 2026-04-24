@@ -1,0 +1,397 @@
+* {
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at top,
+
+      #06152d,
+
+      #02040d
+    );
+
+  color: white;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  overflow-x: hidden;
+}
+
+/* ================= */
+/* START SCREEN */
+/* ================= */
+
+#start-screen {
+
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 40px;
+}
+
+.start-card {
+
+  width: 100%;
+  max-width: 900px;
+
+  background:
+    rgba(255,255,255,0.04);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  border-radius: 30px;
+
+  padding: 50px;
+
+  backdrop-filter:
+    blur(20px);
+
+  text-align: center;
+}
+
+.tag {
+
+  color:
+    #66e3ff;
+
+  margin-bottom: 20px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  font-size: 13px;
+}
+
+.start-card h1 {
+
+  font-size: 90px;
+
+  font-family:
+    "Orbitron",
+    sans-serif;
+
+  margin-bottom: 20px;
+
+  color:
+    #ffffff;
+}
+
+.desc {
+
+  max-width: 600px;
+
+  margin:
+    0 auto 40px;
+
+  line-height: 1.8;
+
+  color:
+    rgba(255,255,255,0.7);
+}
+
+#affinity-buttons {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      1fr
+    );
+
+  gap: 20px;
+}
+
+#affinity-buttons button {
+
+  border: none;
+
+  padding: 22px;
+
+  border-radius: 20px;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+#affinity-buttons button:hover {
+
+  transform:
+    translateY(-4px);
+
+  filter:
+    brightness(1.1);
+}
+
+/* ================= */
+/* COLORS */
+/* ================= */
+
+.enhancer {
+  background: #45c66a;
+}
+
+.transmuter {
+  background: #9c4dff;
+}
+
+.conjurer {
+  background: #3aa3ff;
+}
+
+.manipulator {
+  background: #ff9800;
+}
+
+.emitter {
+  background: #ff4d4d;
+}
+
+.specialist {
+  background: #ff2f92;
+}
+
+/* ================= */
+/* GAME */
+/* ================= */
+
+#game-ui {
+
+  display: none;
+
+  min-height: 100vh;
+
+  padding: 30px;
+}
+
+/* ================= */
+/* TOPBAR */
+/* ================= */
+
+#topbar {
+
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin:
+    0 auto 20px;
+
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  align-items: center;
+}
+
+.logo {
+
+  font-size: 28px;
+
+  font-family:
+    "Orbitron",
+    sans-serif;
+
+  font-weight: 700;
+}
+
+#compass {
+
+  color:
+    #66e3ff;
+
+  font-weight: 600;
+}
+
+/* ================= */
+/* GAME AREA */
+/* ================= */
+
+#game-container {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+#gameCanvas {
+
+  background: black;
+
+  border-radius: 20px;
+
+  border:
+    2px solid
+    rgba(255,255,255,0.1);
+
+  box-shadow:
+    0 0 40px
+    rgba(0,255,255,0.15);
+}
+
+/* ================= */
+/* FOOTER */
+/* ================= */
+
+#bottom-ui {
+
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin:
+    25px auto 0;
+
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 20px;
+}
+
+#legend {
+
+  display: flex;
+
+  gap: 18px;
+
+  flex-wrap: wrap;
+}
+
+#legend div {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color:
+    rgba(255,255,255,0.8);
+}
+
+.dot {
+
+  width: 14px;
+  height: 14px;
+
+  border-radius: 50%;
+}
+
+#game-result {
+
+  font-size: 24px;
+
+  font-weight: 700;
+
+  color:
+    #66ffcc;
+}
+
+/* ================= */
+/* MOBILE */
+/* ================= */
+
+@media (
+  max-width: 768px
+) {
+
+  .start-card h1 {
+
+    font-size: 52px;
+  }
+
+  #affinity-buttons {
+
+    grid-template-columns:
+      1fr;
+  }
+
+  #bottom-ui {
+
+    flex-direction:
+      column;
+  }
+}
+
+#energy-ui {
+
+  width: 260px;
+}
+
+#energy-text {
+
+  margin-bottom: 8px;
+
+  font-size: 14px;
+
+  color:
+    rgba(255,255,255,0.8);
+}
+
+#energy-bar {
+
+  width: 100%;
+
+  height: 18px;
+
+  background:
+    rgba(255,255,255,0.1);
+
+  border-radius: 999px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+}
+
+#energy-fill {
+
+  height: 100%;
+
+  width: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      #00ff99,
+      #00ccff
+    );
+
+  transition:
+    width 0.25s ease;
+}

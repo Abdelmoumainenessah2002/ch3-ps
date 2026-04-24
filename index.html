@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>
+    Nen Compass
+  </title>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link
+    rel="stylesheet"
+    href="./style.css"
+  />
+
+</head>
+
+<body>
+
+  <!-- START -->
+
+  <section id="start-screen">
+
+    <div class="start-card">
+
+      <p class="tag">
+        Hunter x Hunter Strategy Simulation
+      </p>
+
+      <h1>
+        NEN COMPASS
+      </h1>
+
+      <p class="desc">
+
+        Reach the core before the
+        Shadow Hunter using
+        weighted A* pathfinding.
+
+      </p>
+
+      <div id="affinity-buttons">
+
+        <button
+          class="enhancer"
+          data-affinity="Enhancer"
+        >
+          Enhancer
+        </button>
+
+        <button
+          class="transmuter"
+          data-affinity="Transmuter"
+        >
+          Transmuter
+        </button>
+
+        <button
+          class="conjurer"
+          data-affinity="Conjurer"
+        >
+          Conjurer
+        </button>
+
+        <button
+          class="manipulator"
+          data-affinity="Manipulator"
+        >
+          Manipulator
+        </button>
+
+        <button
+          class="emitter"
+          data-affinity="Emitter"
+        >
+          Emitter
+        </button>
+
+        <button
+          class="specialist"
+          data-affinity="Specialist"
+        >
+          Specialist
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- GAME -->
+
+  <main id="game-ui">
+
+    <!-- TOP BAR -->
+
+    <header id="topbar">
+
+      <div class="logo">
+        NEN COMPASS
+      </div>
+
+      <div id="compass">
+        Direction: --
+      </div>
+
+      <div id="energy-ui">
+
+  <div id="energy-text">
+    Nen Energy
+  </div>
+
+  <div id="energy-bar">
+
+    <div id="energy-fill"></div>
+
+  </div>
+
+</div>
+
+    </header>
+
+    <!-- GAME AREA -->
+
+    <section id="game-container">
+
+      <canvas
+        id="gameCanvas"
+      ></canvas>
+
+    </section>
+
+    <!-- BOTTOM -->
+
+    <footer id="bottom-ui">
+
+      <div id="legend">
+
+        <div>
+          <span class="dot enhancer"></span>
+          Enhancer
+        </div>
+
+        <div>
+          <span class="dot transmuter"></span>
+          Transmuter
+        </div>
+
+        <div>
+          <span class="dot conjurer"></span>
+          Conjurer
+        </div>
+
+        <div>
+          <span class="dot manipulator"></span>
+          Manipulator
+        </div>
+
+        <div>
+          <span class="dot emitter"></span>
+          Emitter
+        </div>
+
+        <div>
+          <span class="dot specialist"></span>
+          Specialist
+        </div>
+
+      </div>
+
+      <div id="game-result">
+
+      </div>
+
+    </footer>
+
+  </main>
+
+  <script
+    type="module"
+    src="./app.js"
+  ></script>
+
+</body>
+
+</html>
